@@ -444,7 +444,11 @@ section {
 
 @media screen and (max-width: 700px) {
     .quote h1 {
-        font-size: 4rem;
+        font-size: 3rem;
+        width: 50%;
+    }
+    .quote {
+        background-attachment: scroll;
     }
 }
 
