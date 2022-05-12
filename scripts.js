@@ -2,6 +2,10 @@
 const navbarItem= document.querySelector(".navbar__links")
 const navbarSubmenu= document.querySelector(".navbar__submenu")
 const navbarSubitems= document.querySelectorAll(".navbar__subitem")
+const menu = document.querySelector("#mobile-menu")
+const menuLinks= document.querySelector(".navbar__menu")
+const sections=document.querySelector(".sections")
+const header=document.querySelector(".header")
 
 // menu.addEventListener("click", function() {
 //     menu.classList.toggle("is-active")
@@ -12,6 +16,23 @@ const navbarSubitems= document.querySelectorAll(".navbar__subitem")
 //     navbarSubmenu.classList.toggle("is-active");
 //     navbarSubitems.classList.toggle("active");
 // })
+const headerNav= document.querySelector(".headerNav")
+
+
+window.onscroll = function() {
+    if(window.scrollY >= 500) {
+        menuLinks.classList.add("sticky");
+    }
+    else {
+        menuLinks.classList.remove("sticky");
+    }
+}
+
+
+menu.addEventListener("click", function() {
+    menu.classList.toggle("is-active")
+    menuLinks.classList.toggle("active");
+})
 
 let slideIndex= 1;
 showSlides(slideIndex);
